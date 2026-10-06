@@ -1,0 +1,9 @@
+[project]
+name = "weekly-review"
+version = "0.1.0"
+description = "Weekly time review for the firm's partners"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

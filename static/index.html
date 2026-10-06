@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weekly Review</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Weekly Review</h1>
+    <nav class="week-nav">
+      <button id="prev-week" type="button">&larr; Previous week</button>
+      <span id="week-label">Loading&hellip;</span>
+      <button id="next-week" type="button">Next week &rarr;</button>
+    </nav>
+  </header>
+
+  <main>
+    <p id="error" class="error" hidden></p>
+
+    <section class="totals">
+      <div class="card">
+        <span class="card-label">Total hours</span>
+        <span class="card-value" id="total-hours">&ndash;</span>
+      </div>
+      <div class="card">
+        <span class="card-label">Billable</span>
+        <span class="card-value" id="billable-hours">&ndash;</span>
+      </div>
+      <div class="card">
+        <span class="card-label">Non-billable</span>
+        <span class="card-value" id="non-billable-hours">&ndash;</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Hours per lawyer</h2>
+      <table>
+        <thead>
+          <tr><th>Lawyer</th><th class="num">Total</th><th class="num">Billable</th><th class="num">Non-billable</th></tr>
+        </thead>
+        <tbody id="lawyer-rows"></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Hours per matter</h2>
+      <table>
+        <thead>
+          <tr><th>Matter</th><th>Client</th><th class="num">Total</th><th class="num">Billable</th></tr>
+        </thead>
+        <tbody id="matter-rows"></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Matters with no activity this week</h2>
+      <ul id="idle-matters"></ul>
+    </section>
+  </main>
+
+  <script src="/static/review.js"></script>
+</body>
+</html>
